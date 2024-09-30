@@ -1,0 +1,55 @@
+<body [ngClass]="{'highlight': isHighlight}">
+  
+<h2>ngIf Example</h2>
+
+<button *ngIf="data">Sign In</button><br><br>
+
+<button *ngIf="!data">Sign Up</button>
+
+<h2>ngFor Example</h2>
+<h3>Example 2</h3>
+
+<ul *ngFor="let i of numbers">
+  <li>{{i}}</li>
+</ul>
+
+<h2>ngFor Example</h2>
+<h3>Example 3</h3>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tbody *ngFor="let std of students">
+    <tr>
+      <td>{{std.id}}</td>
+      <td>{{std.name}}</td>
+      <td>{{std.age}}</td>
+
+    </tr>
+  </tbody>
+</table>
+
+<div [ngSwitch]='color'>
+  <p *ngSwitchCase="'yellow'">yellow color</p>
+  <p *ngSwitchCase="'white'">white color</p>
+  <p *ngSwitchCase="'red'">red color</p>
+  <p *ngSwitchCase="'blue'">blue color</p>
+</div>
+
+
+<h2>Attribute Directives</h2>
+
+<button (click)="highlightOnOff()">Highlight On/Off</button><br><br>
+
+<!-- ngStyle -->
+<div [ngStyle]="{'font-size':fontSize}">
+  This is my text
+</div>
+
+<button (click)="increase()">Increase</button>
+<button (click)="decrease()">Decrease</button>
+
+</body>
